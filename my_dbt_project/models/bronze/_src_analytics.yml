@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: google_analytics_sample
+    database: bigquery-public-data
+    schema: analytics_1
+    tables:
+      - name: ga_sessions
+        description: "Raw sessions data from Google Analytics"
+        columns:
+          - name: session_id
+            description: "Unique session identifier"
+          - name: user_id
+            description: "Unique identifier for the user"
+          - name: timestamp
+            description: "Timestamp of the session"
+          - name: pageviews
+            description: "Number of pageviews in the session"
+          - name: traffic_source
+            description: "Source of the session (e.g., direct, organic)"
