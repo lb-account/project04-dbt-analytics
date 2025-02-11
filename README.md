@@ -35,5 +35,4 @@ This project uses the following Python libraries:
 
 - **dbt-core** – A framework for transforming data in your warehouse  
 - **dbt-bigquery** – DBT adapter for BigQuery  
-- **pandas** (optional) – Data manipulation (if used in custom scripts)  
-- **numpy** (optional) – Numerical computing (if used in custom scripts)  
+
