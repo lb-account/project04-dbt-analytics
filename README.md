@@ -8,12 +8,13 @@ The project covers the entire workflow, from extracting raw data to transforming
 ## 📂 Contents  
 - **dbt_project.yml** – The main DBT project configuration file  
 - **models/** – Contains DBT models for data transformation and analysis  
-    - **staging/** – Raw data transformation  
-    - **intermediate/** – Further cleaning and enriching the data  
-    - **final/** – Final, analyzed tables ready for reporting  
-- **tests/** – DBT tests to ensure data quality and consistency  
-- **macros/** – Custom DBT macros (if applicable)  
+    - **bronze/** – Raw data transformation from source systems, focused on basic cleaning and initial ingestion  
+    - **silver/** – Further cleaning, enrichment, and data quality improvements to create a more usable dataset  
+    - **gold/** – Final, transformed, and highly-aggregated tables ready for analysis and reporting  
+- **tests/** – DBT tests to ensure data quality and consistency 
 - **documentation/** – Documentation of the project and data pipeline steps  
+
+## 🛠️ Installation and Setup  
 
 To run this project, follow these steps:
 
