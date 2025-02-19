@@ -1,9 +1,15 @@
 # Google Analytics E-commerce Analysis with DBT and BigQuery
 
 ## 📌 Overview  
-This project demonstrates how to use **DBT** (Data Build Tool) in conjunction with **BigQuery** to collect, transform, and analyze data from a public Google Analytics e-commerce dataset. The goal is to showcase data transformation and analysis skills while applying best practices such as adding tests and documentation to ensure data integrity and maintainability.
+This project demonstrates how to use **DBT** (Data Build Tool) in conjunction with **BigQuery** to collect, transform, and analyze data from a public [Google Analytics e-commerce dataset](https://support.google.com/analytics/answer/3437719?hl=en). The dataset provides 12 months (August 2016 to August 2017) of obfuscated Google Analytics 360 data from the Google Merchandise Store, a real ecommerce store that sells Google-branded merchandise.
 
-The project covers the entire workflow, from extracting raw data to transforming it into actionable insights, ensuring high data quality with testing, and documenting the steps for reproducibility and clarity.
+The data is typical of what an ecommerce website would see and includes the following information:
+
+- Traffic source data: information about where website visitors originate, including data about organic traffic, paid search traffic, and display traffic
+- Content data: information about the behavior of users on the site, such as URLs of pages that visitors look at, how they interact with content, etc.
+- Transactional data: information about the transactions on the Google Merchandise Store website.
+
+The goal is to showcase data transformation and analysis skills while applying best practices such as adding tests and documentation to ensure data integrity and maintainability.
 
 ## 📂 Contents  
 - **dbt_project.yml** – The main DBT project configuration file  
@@ -11,8 +17,7 @@ The project covers the entire workflow, from extracting raw data to transforming
     - **bronze/** – Raw data transformation from source systems, focused on basic cleaning and initial ingestion  
     - **silver/** – Further cleaning, enrichment, and data quality improvements to create a more usable dataset  
     - **gold/** – Final, transformed, and highly-aggregated tables ready for analysis and reporting  
-- **tests/** – DBT tests to ensure data quality and consistency 
-- **documentation/** – Documentation of the project and data pipeline steps  
+- **tests/** – DBT tests to ensure data quality and consistency
 
 ## 🛠️ Installation and Setup  
 
