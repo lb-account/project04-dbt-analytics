@@ -1,10 +1,13 @@
 -- Bronze Layer: Loading raw sessions data from Google Analytics
 
-WITH raw_ga_sessions AS (
-    SELECT
-        *
-    FROM
-        {{ source('google_analytics_sample', 'ga_sessions') }}
+with sessions as (
+    (select * from {{ source('google_analytics_sample', 'ga_sessions_20170801') }} limit 500)
+    union all
+    (select * from {{ source('google_analytics_sample', 'ga_sessions_20170731') }} limit 500)
+    union all
+    (select * from {{ source('google_analytics_sample', 'ga_sessions_20170730') }} limit 500)
 )
 
-SELECT * FROM raw_ga_sessions
+select
+    *
+from sessions
