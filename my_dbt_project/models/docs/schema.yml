@@ -1,0 +1,6 @@
+models:
+- name: conversion_rate
+  description: Description of conversion rate
+
+- name: actions
+  description: Description of actions

@@ -7,17 +7,18 @@ sources:
     schema: google_analytics_sample
     description: "Sessions data from Google Analytics, you can find schema details here: https://support.google.com/analytics/answer/3437719?hl=en"
     tables:
-      - name : ga_sessions_20170801
-        description : "Data from 01/08/2017"
-        identifier: ga_sessions_20170801  
-        #name: ga_sessions
-        #identifier : ga_sessions_*
-      - name : ga_sessions_20170731
-        description : "Data from 31/07/2017"
-        identifier: ga_sessions_20170731
+      - name: ga_sessions
+        identifier : ga_sessions_*
+        
+      #- name : ga_sessions_20170801
+      #description : "Data from 01/08/2017"
+      #identifier: ga_sessions_20170801 
+      #- name : ga_sessions_20170731
+      #  description : "Data from 31/07/2017"
+      #  identifier: ga_sessions_20170731
 
-      - name : ga_sessions_20170730
-        description : "Data from 30/07/2017"
-        identifier: ga_sessions_20170730
+      #- name : ga_sessions_20170730
+      #  description : "Data from 30/07/2017"
+      #  identifier: ga_sessions_20170730
 
         
