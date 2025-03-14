@@ -1,25 +1,17 @@
 WITH gold_data AS (
     SELECT 
-        action,
-        users,
-        CASE 
-            WHEN action = 'Click through of product lists' THEN NULL
-            WHEN action = 'Product detail views' THEN 
-                users / (SELECT users FROM `your_dataset.silver_data` WHERE action = 'Click through of product lists')
-            WHEN action = 'Check out' THEN 
-                users / (SELECT users FROM `your_dataset.silver_data` WHERE action = 'Product detail views')
-            WHEN action = 'Completed purchase' THEN 
-                users / (SELECT users FROM `your_dataset.silver_data` WHERE action = 'Check out')
-        END AS conversion_rate
+        CASE WHEN action_type = '1' THEN 'Click through of product lists'
+                 WHEN action_type = '2' THEN 'Product detail views'
+                 WHEN action_type = '5' THEN 'Check out'
+                 WHEN action_type = '6' THEN 'Completed purchase'
+            END AS action,
+            COUNT(fullVisitorID) AS users
     FROM 
-        `your_dataset.silver_data`
+        {{ref ('actions')}}
+    GROUP BY
+        action
 )
 
-SELECT 
-    action,
-    users,
-    ROUND(conversion_rate, 4) AS conversion_rate
-FROM 
-    gold_data
+SELECT * FROM gold_data 
 ORDER BY 
-    FIELD(action, 'Click through of product lists', 'Product detail views', 'Check out', 'Completed purchase')
+        users DESC

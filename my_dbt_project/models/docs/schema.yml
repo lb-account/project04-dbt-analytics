@@ -1,6 +1,21 @@
-models:
-- name: conversion_rate
-  description: Description of conversion rate
+version: 2
 
-- name: actions
-  description: Description of actions
+sources:
+  - name: google_analytics_sample
+    description : "Google Analytics Sample Dataset : The dataset provides 12 months (August 2016 to August 2017) of obfuscated Google Analytics 360 data from the Google Merchandise Store , a real ecommerce store that sells Google-branded merchandise in BigQuery."
+    database: bigquery-public-data
+    schema: google_analytics_sample
+    description: "Sessions data from Google Analytics, you can find schema details here: https://support.google.com/analytics/answer/3437719?hl=en"
+    tables:
+      - name: ga_sessions
+        identifier : ga_sessions_*
+        
+models:
+  - name: src_analytics
+    description: Description of src_analytics Cleansed analytics data
+
+  - name: actions
+    description: Description of actions
+
+  - name: conversion_rate
+    description: Description of conversion rate

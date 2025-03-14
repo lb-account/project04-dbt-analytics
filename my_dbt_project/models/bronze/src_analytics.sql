@@ -1,20 +1,10 @@
 WITH bronze_data AS (
-    SELECT 
-        fullVisitorId,
-        h.eCommerceAction.action_type,
-        p.productSKU
+    SELECT *
     FROM 
-       /* `bigquery-public-data.google_analytics_sample.ga_sessions_*`,*/
-        {{source ('google_analytics_sample','ga_sessions')}},
-        UNNEST(hits) AS h,
-        UNNEST(h.product) AS p
+        {{source ('google_analytics_sample','ga_sessions')}}
     WHERE
-        _TABLE_SUFFIX BETWEEN '20170729' AND '20170801'
-    
-    AND
-        h.eCommerceAction.action_type IN ('1', '2', '5', '6')  -- Filter out irrelevant actions
+        _TABLE_SUFFIX BETWEEN '20160801' AND '20170801'
 
 )
 
-SELECT * FROM bronze_data 
-LIMIT 3000
+SELECT * FROM bronze_data
