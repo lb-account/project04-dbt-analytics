@@ -12,10 +12,22 @@ sources:
         
 models:
   - name: src_analytics
-    description: Description of src_analytics Cleansed analytics data
+    description: Description of src_analytics 
 
   - name: actions
     description: Description of actions
 
+  - name: products
+    description: Description of products
+
+  - name: men_tshirts
+    description: Description of men_tshirts
+
   - name: conversion_rate
     description: Description of conversion rate
+
+  - name: best_selling
+    description: Description of best selling
+
+  - name: moving_average
+    description: Description of moving_average

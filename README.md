@@ -1,7 +1,7 @@
 # Google Analytics E-commerce Analysis with DBT and BigQuery
 
 ## 📌 Overview  
-This project demonstrates how to use **DBT** (Data Build Tool) in conjunction with **BigQuery** to collect, transform, and analyze data from a public [Google Analytics e-commerce dataset](https://support.google.com/analytics/answer/3437719?hl=en). The dataset provides 12 months (August 2016 to August 2017) of obfuscated Google Analytics 360 data from the Google Merchandise Store, a real ecommerce store that sells Google-branded merchandise.
+This project demonstrates how to use **DBT** (Data Build Tool) in conjunction with **BigQuery** to collect, transform, and analyze data from a public [Google Analytics e-commerce dataset](https://support.google.com/analytics/answer/3437719?hl=en). The dataset provides 12 months (August 2016 to August 2017) of obfuscated Google Analytics 360 data from the [Google Merchandise Store](https://www.googlemerchandisestore.com/shop.axd/Home?utm_source=Partners&utm_medium=affiliate&utm_campaign=Data%20Share%20Promo), a real ecommerce store that sells Google-branded merchandise.
 
 The data is typical of what an ecommerce website would see and includes the following information:
 
